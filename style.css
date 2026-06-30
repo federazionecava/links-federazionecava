@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500;600&display=swap');
+
+:root{
+  --laguna: #1f5c52;       /* verde laguna veneciana */
+  --laguna-dark: #143b35;
+  --terracota: #b9542c;    /* terracota de los tejados */
+  --oro: #c9a227;          /* dorado de los mosaicos */
+  --crema: #f3e9d2;        /* fachadas venecianas */
+  --crema-2: #ece0c4;
+  --texto: #2b241a;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(201,162,39,0.18), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(31,92,82,0.25), transparent 45%),
+    var(--crema);
+  font-family: 'Jost', sans-serif;
+  color: var(--texto);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 32px 16px;
+}
+
+.card{
+  width:100%;
+  max-width:380px;
+  background: var(--crema-2);
+  border: 1px solid rgba(43,36,26,0.12);
+  border-radius: 18px;
+  padding: 38px 28px 30px;
+  position:relative;
+  box-shadow: 0 18px 40px rgba(20,59,53,0.18);
+}
+
+/* filete dorado tipo greca veneciana */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border: 1.5px solid var(--oro);
+  border-radius: 12px;
+  pointer-events:none;
+  opacity:0.6;
+}
+
+.avatar{
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--terracota), var(--oro));
+  border: 3px solid var(--crema);
+  box-shadow: 0 0 0 2px var(--laguna);
+}
+
+h1{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight:700;
+  font-size: 1.9rem;
+  text-align:center;
+  margin: 0 0 2px;
+  letter-spacing: 0.5px;
+  color: var(--laguna-dark);
+}
+
+.subtitle{
+  text-align:center;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin: 0 0 26px;
+}
+
+.divider{
+  width:46px;
+  height:2px;
+  background: var(--oro);
+  margin: 0 auto 26px;
+}
+
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color: var(--texto);
+  background: var(--crema);
+  border: 1px solid rgba(31,92,82,0.25);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-weight:500;
+  font-size: 0.97rem;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.link svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  fill: var(--laguna);
+}
+
+.link:hover{
+  transform: translateY(-2px);
+  background: var(--laguna);
+  color: var(--crema);
+  border-color: var(--laguna);
+}
+.link:hover svg{ fill: var(--oro); }
+
+footer{
+  text-align:center;
+  margin-top: 26px;
+  font-size: 0.7rem;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color: rgba(43,36,26,0.45);
+}
