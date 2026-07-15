@@ -53,9 +53,7 @@ body{
   height:84px;
   border-radius:50%;
   margin: 0 auto 14px;
-  
   box-shadow: 0 0 0 2px var(--laguna);
-
   object-fit: cover; /* 👈 CLAVE */
   display: block;     /* 👈 evita comportamientos raros inline */
 }
@@ -157,11 +155,12 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Animación de resplandor pulsante para el botón de Instagram */
 .link.instagram{
   animation: glow-pulse 2.5s ease-in-out infinite;
 }
 
-@keyframes glow-pulse{
+@keyframes glow-pulse{ 
   0%, 100%{
     box-shadow: 0 0 0px rgba(199,161,90,0);
     border-color: rgba(31,92,82,0.25);
@@ -171,3 +170,4 @@ html, body {
     border-color: var(--oro);
   }
 }
+/* Fin del bloque animación de resplandor pulsante para el botón de Instagram */
